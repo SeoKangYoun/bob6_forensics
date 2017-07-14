@@ -1,5 +1,4 @@
 import  whois
-import json
 
 domain_file = open('domains.txt','r')
 ret_file = open('result.txt', 'w')
