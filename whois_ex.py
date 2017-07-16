@@ -5,8 +5,10 @@ ret_file = open('result.json', 'w')
 
 
 l = domain_file.readline()
-while l:
 
+while l:
+	l = l.replace("\n","")
+	ret_file.write("{'"+l+"':")
 	ret_file.write("{")
 	domain_info = whois.query(l).__dict__
 	
@@ -22,7 +24,7 @@ while l:
 		else:
 			ret_file.write(item)
 
-	ret_file.write("}\n")
+	ret_file.write("}}\n")
 
 	l = domain_file.readline()
 
