@@ -1,7 +1,7 @@
 import  whois
 
 domain_file = open('domains.txt','r')
-ret_file = open('result.txt', 'w')
+ret_file = open('result.json', 'w')
 
 
 l = domain_file.readline()
